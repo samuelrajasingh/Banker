@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_create_account"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="Create Account" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_check_balance"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="Check Balance" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_credit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="Credit to Account " />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_debit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="Debit from Account" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_transfer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="Transfer Money" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_view_all"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:text="View all Accounts" />
+
+
+</LinearLayout>
