@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Banker</string>
+    <string name="balance">Balance</string>
+    <string name="account_number">Account number</string>
+    <string name="account_name">Account Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="check_balance">Check Balance</string>
+    <string name="credit_to_account">Credit to Account</string>
+    <string name="debit_from_account">Debit from Account</string>
+    <string name="transfer_money">Transfer Money</string>
+    <string name="view_all_accounts">View all Accounts</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+    <string name="icon">Icon</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
         <item>Current Account</item>
