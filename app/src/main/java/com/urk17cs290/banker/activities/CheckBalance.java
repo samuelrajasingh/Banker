@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020. created by suraj kumar
+ */
+
 package com.urk17cs290.banker.activities;
 
 import androidx.appcompat.app.AppCompatActivity;

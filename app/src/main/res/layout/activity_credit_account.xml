@@ -6,4 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".activities.CreditAccount">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="361dp"
+        android:layout_height="436dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bac"
+            android:layout_width="match_parent"
+            android:layout_height="431dp"
+            android:background="#B2FF59">
+
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="355dp"
+                android:layout_height="203dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/credit" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/credit"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="311dp"
+                android:layout_height="60dp"
+                android:hint="Enter Amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                app:layout_constraintVertical_bias="0.2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/creditButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="154dp"
+                android:layout_height="40dp"
+
+                android:backgroundTint="#FF5252"
+                android:drawableLeft="@drawable/ic_add_circle_outline_24"
+                android:text="Add Amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/credit"
+                app:layout_constraintVertical_bias="0.58"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
