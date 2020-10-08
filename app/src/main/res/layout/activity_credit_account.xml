@@ -55,7 +55,7 @@
                 android:id="@+id/creditButton"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="154dp"
-                android:layout_height="40dp"
+                android:layout_height="52dp"
 
                 android:backgroundTint="@color/colorPrimary"
                 android:drawableLeft="@drawable/ic_add_circle_outline_24"
