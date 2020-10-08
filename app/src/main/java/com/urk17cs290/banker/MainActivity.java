@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020. Created by Rajasingh Samuel.
+ */
+
 package com.urk17cs290.banker;
 
 import android.content.Intent;
@@ -5,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import com.urk17cs290.banker.activities.Accounts;
 import com.urk17cs290.banker.activities.CheckBalance;
@@ -15,8 +18,6 @@ import com.urk17cs290.banker.activities.DebitAccount;
 import com.urk17cs290.banker.activities.TransferAmount;
 
 public class MainActivity extends AppCompatActivity {
-  public static final int ADD_ACCOUNT_REQUEST = 1;
-  public static final int EDIT_ACCOUNT_REQUEST = 2;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

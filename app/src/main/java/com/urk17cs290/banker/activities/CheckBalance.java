@@ -1,8 +1,8 @@
 package com.urk17cs290.banker.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.urk17cs290.banker.R;
 
