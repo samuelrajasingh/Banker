@@ -33,8 +33,8 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
   @Override
   public void onBindViewHolder(@NonNull AccountHolder holder, int position) {
     Account currentAccount = accounts.get(position);
-    holder.textViewAccountName.setText(currentAccount.getAccount_Name());
-    holder.textViewAccountNumber.setText(currentAccount.getAccount_number());
+    holder.textViewAccountName.setText(currentAccount.getAccountName());
+    holder.textViewAccountNumber.setText(currentAccount.getAccountNumber());
     holder.textViewBalance.setText(String.valueOf(currentAccount.getBalance()));
   }
 

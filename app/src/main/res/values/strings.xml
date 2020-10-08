@@ -12,6 +12,12 @@
     <string name="admin">Admin</string>
     <string name="user">User</string>
     <string name="icon">Icon</string>
+    <string name="_0_00">0.00</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="account_creation_page_logo">Account creation page logo</string>
+    <string name="password">Password</string>
+    <string name="mobile_number">Mobile Number</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
         <item>Current Account</item>

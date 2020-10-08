@@ -5,18 +5,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.urk17cs290.banker.MainActivity;
 import com.urk17cs290.banker.R;
 
 public class CreateAccount extends AppCompatActivity {
   Button createAccountButton;
-  EditText name, email, password, mobile;
+  TextInputLayout name;
+    TextInputLayout email;
+    TextInputLayout password;
+    TextInputLayout mobile;
   Spinner accounttype;
   Intent myintent;
   String ac_type_value;
@@ -48,22 +52,19 @@ public class CreateAccount extends AppCompatActivity {
         });
 
     createAccountButton.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
+            view -> {
 
-            String name1 = name.getText().toString();
-            String email1 = email.getText().toString();
-            String password1 = password.getText().toString();
-            String mobile1 = mobile.getText().toString();
-            String accounttype1 = ac_type_value;
+              String name1 = name.getEditText().getText().toString();
+              String email1 = email.getEditText().getText().toString();
+              String password1 = password.getEditText().getText().toString();
+              String mobile1 = mobile.getEditText().getText().toString();
+              String accounttype1 = ac_type_value;
 
-            /*todo
-            save values to database
-             */
-            myintent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(myintent);
-          }
-        });
+              /*todo
+              save values to database
+               */
+              myintent = new Intent(getApplicationContext(), MainActivity.class);
+              startActivity(myintent);
+            });
   }
 }

@@ -20,14 +20,11 @@ public class CheckBalance extends AppCompatActivity {
     setBalance = findViewById(R.id.showBalance); // textview
     checkBalance = findViewById(R.id.check_balance_button); // button
     checkBalance.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-            /*TODO
-             * get balance
-             * set as a string
-             * */
-          }
-        });
+            view -> {
+              /*TODO
+               * get balance
+               * set as a string
+               * */
+            });
   }
 }
