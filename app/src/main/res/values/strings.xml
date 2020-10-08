@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Banker</string>
+    <string name="balance">Balance</string>
+    <string name="account_number">Account number</string>
+    <string name="account_name">Account Name</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
         <item>Current Account</item>
