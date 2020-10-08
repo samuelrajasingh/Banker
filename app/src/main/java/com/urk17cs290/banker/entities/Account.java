@@ -9,34 +9,38 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "account_table")
 public class Account {
-    private String user;
+    private String account_Name;
     private int account_number;
     private int balance;
+    private int mobile_number;
+    private String account_type;
+    private String email;
 
-    public int getPin() {
-        return pin;
+
+    public int getPassword() {
+        return password;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
+    public void setPassword(int password) {
+        this.password = password;
     }
 
-    private int pin;
+    private int password;
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    public Account(String user, int account_number, int balance) {
-        this.user = user;
+    public Account(String account_Name, int account_number, int balance) {
+        this.account_Name = account_Name;
         this.account_number = account_number;
         this.balance = balance;
     }
 
-    public String getUser() {
-        return user;
+    public String getAccount_Name() {
+        return account_Name;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setAccount_Name(String account_Name) {
+        this.account_Name = account_Name;
     }
 
     public int getAccount_number() {
