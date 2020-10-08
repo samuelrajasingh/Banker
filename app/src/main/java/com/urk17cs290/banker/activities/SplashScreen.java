@@ -12,8 +12,8 @@ import com.urk17cs290.banker.R;
 
 public class SplashScreen extends AppCompatActivity {
   public static String user_or_admin = "";
-  Intent myintent1, myintent2;
-  Button b1, b2;
+  Intent myintent1;
+    Button b1, b2;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +24,14 @@ public class SplashScreen extends AppCompatActivity {
     b2 = findViewById(R.id.containedButton2);
 
     b1.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-            user_or_admin = "admin";
-            startActivity(myintent1); // change
-          }
-        });
+            view -> {
+              user_or_admin = "admin";
+              startActivity(myintent1); // change
+            });
     b2.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-            user_or_admin = "user";
-            startActivity(myintent1); // change
-          }
-        });
+            view -> {
+              user_or_admin = "user";
+              startActivity(myintent1); // change
+            });
   }
 }

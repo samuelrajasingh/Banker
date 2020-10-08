@@ -24,7 +24,7 @@ public interface AccountDao {
   @Update
   void update(Account account);
 
-  @Query("SELECT * FROM account_table WHERE account_number=:num")
+  @Query("SELECT * FROM account_table WHERE accountNumber=:num")
   void search(int num);
 
   @Delete

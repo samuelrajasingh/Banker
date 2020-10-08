@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     tools:context=".activities.CreateAccount">
 
 
@@ -11,12 +12,11 @@
         android:id="@+id/textView2"
         android:layout_width="316dp"
         android:layout_height="80dp"
-        android:background="#FF4081"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:outlineProvider="none"
         android:text="@string/create_account"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,59 +38,82 @@
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FF4081"
-            android:contentDescription="Account creation page logo"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/account_creation_page_logo"
             android:outlineProvider="none"
             app:srcCompat="@drawable/createaccount" />
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:gravity="center|center_horizontal"
         android:hint="@string/name"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:placeholderText="@string/name"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/first_names" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:hint="Email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        tools:layout_editor_absoluteX="0dp" />
+        app:placeholderText="@string/email" />
 
     <Spinner
         android:id="@+id/accounttype"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:background="#FF4081"
+        android:background="@color/colorPrimary"
         android:entries="@array/accounts"
+        android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:hint="Password"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/accounttype"
-        tools:layout_editor_absoluteX="16dp" />
+        app:placeholderText="@string/password" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phone"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:hint="Mobile Number"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:hint="@string/mobile_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        tools:layout_editor_absoluteX="0dp" />
+        app:placeholderText="@string/mobile_number" />
 
     <Button
         android:id="@+id/createAccount"
@@ -98,13 +121,9 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
-        android:backgroundTint="#FF4081"
-        android:drawableLeft="@drawable/ic_add_circle_outline_24"
         android:elevation="4dp"
-        android:text="Create Account"
-        android:textColor="#070707"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:text="@string/create_account"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"

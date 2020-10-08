@@ -9,19 +9,44 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "account_table")
 public class Account {
-  private String account_Name;
-  private int account_number;
+  private String accountName;
+  private int accountNumber;
   private int balance;
-  private int mobile_number;
-  private String account_type;
+  private int mobileNumber;
+  private String accountType;
   private String email;
   private int password;
+
+  public int getMobileNumber() {
+    return mobileNumber;
+  }
+
+  public void setMobileNumber(int mobileNumber) {
+    this.mobileNumber = mobileNumber;
+  }
+
+  public String getAccountType() {
+    return accountType;
+  }
+
+  public void setAccountType(String accountType) {
+    this.accountType = accountType;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
   @PrimaryKey(autoGenerate = true)
   private int id;
 
-  public Account(String account_Name, int account_number, int balance) {
-    this.account_Name = account_Name;
-    this.account_number = account_number;
+  public Account(String accountName, int accountNumber, int balance) {
+    this.accountName = accountName;
+    this.accountNumber = accountNumber;
     this.balance = balance;
   }
 
@@ -33,20 +58,20 @@ public class Account {
     this.password = password;
   }
 
-  public String getAccount_Name() {
-    return account_Name;
+  public String getAccountName() {
+    return accountName;
   }
 
-  public void setAccount_Name(String account_Name) {
-    this.account_Name = account_Name;
+  public void setAccountName(String accountName) {
+    this.accountName = accountName;
   }
 
-  public int getAccount_number() {
-    return account_number;
+  public int getAccountNumber() {
+    return accountNumber;
   }
 
-  public void setAccount_number(int account_number) {
-    this.account_number = account_number;
+  public void setAccountNumber(int accountNumber) {
+    this.accountNumber = accountNumber;
   }
 
   public int getBalance() {

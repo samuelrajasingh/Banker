@@ -46,12 +46,10 @@ public class MainActivity extends AppCompatActivity {
       case R.id.button_transfer:
         Intent e = new Intent(this, TransferAmount.class);
         startActivity(e);
-        // do your code
         break;
       case R.id.button_view_all:
         Intent i = new Intent(this, Accounts.class);
         startActivity(i);
-        // do your code
         break;
       default:
         break;
