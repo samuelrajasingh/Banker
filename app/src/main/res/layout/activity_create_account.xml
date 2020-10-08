@@ -24,10 +24,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:outlineProvider="none"
         android:layout_width="90dp"
         android:layout_height="78dp"
         android:layout_marginBottom="1dp"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.046"
@@ -36,12 +36,12 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:outlineProvider="none"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FF4081"
-            app:srcCompat="@drawable/createaccount"
-            android:contentDescription="Account creation page logo" />
+            android:contentDescription="Account creation page logo"
+            android:outlineProvider="none"
+            app:srcCompat="@drawable/createaccount" />
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -50,8 +50,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:hint="@string/name"
-        app:placeholderText="@string/name"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:placeholderText="@string/name"
         tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.textfield.TextInputLayout
