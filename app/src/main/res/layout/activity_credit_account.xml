@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +20,7 @@
             android:id="@+id/bac"
             android:layout_width="match_parent"
             android:layout_height="431dp"
-            android:background="#B2FF59">
+            >
 
 
             <ImageView
@@ -56,17 +57,17 @@
                 android:layout_width="154dp"
                 android:layout_height="40dp"
 
-                android:backgroundTint="#FF5252"
+                android:backgroundTint="@color/colorPrimary"
                 android:drawableLeft="@drawable/ic_add_circle_outline_24"
                 android:text="Add Amount"
+                android:textColor="#F8F4F4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.12"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/credit"
-                app:layout_constraintVertical_bias="0.58"
 
-                />
+                app:layout_constraintVertical_bias="0.58" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

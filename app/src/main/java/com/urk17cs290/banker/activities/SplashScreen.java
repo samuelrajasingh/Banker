@@ -23,15 +23,21 @@ public class SplashScreen extends AppCompatActivity {
     b1 = findViewById(R.id.containedButton1);
     b2 = findViewById(R.id.containedButton2);
 
-    b1.setOnClickListener(
-            view -> {
-              user_or_admin = "admin";
-              startActivity(myintent1); // change
-            });
-    b2.setOnClickListener(
-            view -> {
+    b1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            user_or_admin = "admin";
+            startActivity(myintent1);
+        }
+    });
+
+      b1.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
               user_or_admin = "user";
-              startActivity(myintent1); // change
-            });
+              startActivity(myintent1);
+          }
+      });
+
   }
 }
