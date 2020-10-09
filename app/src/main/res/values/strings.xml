@@ -18,11 +18,12 @@
     <string name="account_creation_page_logo">Account creation page logo</string>
     <string name="password">Password</string>
     <string name="mobile_number">Mobile Number</string>
+    <string name="account_type">Account type</string>
+    <string name="account_email">Email</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
         <item>Current Account</item>
         <item>Fixed Deposit</item>
-        <item>DEMAT Account</item>
         <item>NRI Account</item>
     </string-array>
 </resources>

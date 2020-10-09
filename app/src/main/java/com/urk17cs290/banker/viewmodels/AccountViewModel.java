@@ -19,7 +19,7 @@ public class AccountViewModel extends AndroidViewModel {
   private AccountRepository repository;
   private LiveData<List<Account>> allAccounts;
 
-  public AccountViewModel(@NonNull Application application) {
+  public AccountViewModel(Application application) {
     super(application);
     repository = new AccountRepository(application);
     allAccounts = repository.getAllAccounts();

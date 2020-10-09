@@ -5,10 +5,12 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:outlineProvider="paddedBounds"
+    android:layout_margin="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:padding="15dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -16,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
-
             android:text="@string/account_name"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
@@ -26,6 +27,27 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_view_account_name"
             android:text="@string/account_number"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+        <TextView
+            android:id="@+id/text_view_account_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_account_number"
+            android:text="@string/account_email"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+        <TextView
+            android:id="@+id/text_view_account_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_account_email"
+            android:text="@string/account_number"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+        <TextView
+            android:id="@+id/text_view_account_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_account_mobile"
+            android:text="@string/account_type"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
         <TextView

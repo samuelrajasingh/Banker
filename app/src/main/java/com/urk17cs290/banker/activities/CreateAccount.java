@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -63,8 +62,13 @@ public class CreateAccount extends AppCompatActivity {
               /*todo
               save values to database
                */
+              //Checking db if account already exist
+              checkAccountExist();
               myintent = new Intent(getApplicationContext(), MainActivity.class);
               startActivity(myintent);
             });
   }
+
+    private void checkAccountExist() {
+    }
 }

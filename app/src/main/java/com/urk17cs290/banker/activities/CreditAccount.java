@@ -2,18 +2,17 @@ package com.urk17cs290.banker.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.urk17cs290.banker.MainActivity;
 import com.urk17cs290.banker.R;
 
 public class CreditAccount extends AppCompatActivity {
 Button b ;
-EditText input;
+TextInputLayout input;
 Intent myintent;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +21,12 @@ Intent myintent;
     b = findViewById(R.id.creditButton);
     input = findViewById(R.id.credit);
     myintent = new Intent(getApplicationContext(), MainActivity.class);
-    b.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        /*TODO
-        * diplay a toast credited successfully
-        * update to database
-        * */
-        startActivity(myintent);
-      }
+    b.setOnClickListener(view -> {
+      /*TODO
+      * diplay a toast credited successfully
+      * update to database
+      * */
+      startActivity(myintent);
     });
   }
 }

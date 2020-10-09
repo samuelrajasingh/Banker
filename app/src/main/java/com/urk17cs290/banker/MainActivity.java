@@ -7,6 +7,7 @@ package com.urk17cs290.banker;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,7 @@ import com.urk17cs290.banker.activities.CheckBalance;
 import com.urk17cs290.banker.activities.CreateAccount;
 import com.urk17cs290.banker.activities.CreditAccount;
 import com.urk17cs290.banker.activities.DebitAccount;
+import com.urk17cs290.banker.activities.SplashScreen;
 import com.urk17cs290.banker.activities.TransferAmount;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    FrameLayout view_frame = findViewById(R.id.view_frame);
+    if (!SplashScreen.isAdmin)
+      view_frame.setVisibility(View.GONE);
+
   }
 
   public void onClick(View v) {

@@ -46,14 +46,20 @@
         android:layout_margin="10dp"
         android:onClick="onClick"
         android:text="@string/transfer_money" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_view_all"
-        android:layout_width="200dp"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:onClick="onClick"
-        android:text="@string/view_all_accounts" />
+        android:id="@+id/view_frame">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_view_all"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:text="@string/view_all_accounts" />
+    </FrameLayout>
+
+
 
 
 </LinearLayout>

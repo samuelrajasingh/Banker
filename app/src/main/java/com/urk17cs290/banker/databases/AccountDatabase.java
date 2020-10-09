@@ -8,13 +8,16 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
+import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.urk17cs290.banker.utlis.AccountType;
 import com.urk17cs290.banker.dao.AccountDao;
 import com.urk17cs290.banker.entities.Account;
 
+@Database(entities = {Account.class}, version = 1)
 public abstract class AccountDatabase extends RoomDatabase {
   private static AccountDatabase instance;
   private static RoomDatabase.Callback roomCallback =
@@ -49,9 +52,9 @@ public abstract class AccountDatabase extends RoomDatabase {
 
     @Override
     protected Void doInBackground(Void... voids) {
-      accountDao.insert(new Account("User 1", 101, 100));
-      accountDao.insert(new Account("User 2", 102, 200));
-      accountDao.insert(new Account("User 3", 103, 300));
+      accountDao.insert(new Account("User 1", 101, 100, AccountType.SAVINGS_ACCOUNT,"user1@a.b",12345678,101));
+      accountDao.insert(new Account("User 2", 102, 200,AccountType.CURRENT_ACCOUNT,"user2@a.b",1234,102));
+      accountDao.insert(new Account("User 3", 103, 300,AccountType.FIXED_DEPOSIT,"user3@a.b",6543,103));
       return null;
     }
   }
