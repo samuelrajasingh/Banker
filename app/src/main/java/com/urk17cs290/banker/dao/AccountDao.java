@@ -20,21 +20,21 @@ import java.util.List;
 @Dao
 public interface AccountDao {
 
-  @Insert
-  void insert(Account account);
+    @Insert
+    void insert(Account account);
 
-  @Update
-  void update(Account account);
+    @Update
+    void update(Account account);
 
-  @Query("SELECT * FROM account_table WHERE accountNumber=:num")
-  Cursor search(int num);
+    @Query("SELECT * FROM account_table WHERE accountNumber=:num")
+    Cursor search(int num);
 
-  @Delete
-  void delete(Account account);
+    @Delete
+    void delete(Account account);
 
-  @Query("DELETE FROM account_table")
-  void deleteAllAccounts();
+    @Query("DELETE FROM account_table")
+    void deleteAllAccounts();
 
-  @Query("SELECT * FROM account_table")
-  LiveData<List<Account>> getAllAccounts();
+    @Query("SELECT * FROM account_table")
+    LiveData<List<Account>> getAllAccounts();
 }

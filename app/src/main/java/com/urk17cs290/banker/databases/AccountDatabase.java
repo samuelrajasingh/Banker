@@ -13,49 +13,48 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.urk17cs290.banker.utlis.AccountType;
 import com.urk17cs290.banker.dao.AccountDao;
 import com.urk17cs290.banker.entities.Account;
 
 @Database(entities = {Account.class}, version = 1)
 public abstract class AccountDatabase extends RoomDatabase {
-  private static AccountDatabase instance;
-  private static RoomDatabase.Callback roomCallback =
-      new RoomDatabase.Callback() {
-        @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-          super.onCreate(db);
-          new PopulateDbAsyncTask(instance).execute();
+    private static AccountDatabase instance;
+    private static RoomDatabase.Callback roomCallback =
+            new RoomDatabase.Callback() {
+                @Override
+                public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                    super.onCreate(db);
+                    new PopulateDbAsyncTask(instance).execute();
+                }
+            };
+
+    public static synchronized AccountDatabase getInstance(Context context) {
+        if (instance == null) {
+            instance =
+                    Room.databaseBuilder(
+                            context.getApplicationContext(), AccountDatabase.class, "Account_database")
+                            .fallbackToDestructiveMigration()
+                            .addCallback(roomCallback)
+                            .build();
         }
-      };
-
-  public static synchronized AccountDatabase getInstance(Context context) {
-    if (instance == null) {
-      instance =
-          Room.databaseBuilder(
-                  context.getApplicationContext(), AccountDatabase.class, "Account_database")
-              .fallbackToDestructiveMigration()
-              .addCallback(roomCallback)
-              .build();
-    }
-    return instance;
-  }
-
-  public abstract AccountDao accountDao();
-
-  private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
-    private AccountDao accountDao;
-
-    private PopulateDbAsyncTask(AccountDatabase db) {
-      accountDao = db.accountDao();
+        return instance;
     }
 
-    @Override
-    protected Void doInBackground(Void... voids) {
-      accountDao.insert(new Account("User 1", 101, 100, AccountType.SAVINGS_ACCOUNT,"user1@a.b",12345678,101));
-      accountDao.insert(new Account("User 2", 102, 200,AccountType.CURRENT_ACCOUNT,"user2@a.b",1234,102));
-      accountDao.insert(new Account("User 3", 103, 300,AccountType.FIXED_DEPOSIT,"user3@a.b",6543,103));
-      return null;
+    public abstract AccountDao accountDao();
+
+    private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
+        private AccountDao accountDao;
+
+        private PopulateDbAsyncTask(AccountDatabase db) {
+            accountDao = db.accountDao();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            accountDao.insert(new Account("User 1", 101, 100, "SAVINGS_ACCOUNT", "user1@a.b", 12345678, 101));
+            accountDao.insert(new Account("User 2", 102, 200, "CURRENT_ACCOUNT", "user2@a.b", 1234, 102));
+            accountDao.insert(new Account("User 3", 103, 300, "FIXED_DEPOSIT", "user3@a.b", 6543, 103));
+            return null;
+        }
     }
-  }
 }

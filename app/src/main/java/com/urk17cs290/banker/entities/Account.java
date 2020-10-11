@@ -4,103 +4,103 @@
 
 package com.urk17cs290.banker.entities;
 
-import androidx.annotation.InspectableProperty;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 
-import com.urk17cs290.banker.utlis.AccountType;
-import com.urk17cs290.banker.utlis.Converters;
 
 @Entity(tableName = "account_table")
 public class Account {
-  private String accountName;
-  private int accountNumber;
-  private int balance;
-  private int mobileNumber;
+    private String accountName;
+    private int accountNumber;
+    private int balance;
+    private int mobileNumber;
 
-  private AccountType accountType;
-  private String email;
-  private int password;
+    private String accountType;
+    private String email;
+    private int password;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
 
-  public AccountType getAccountType() {
-    return accountType;
-  }
+    public String getAccountType() {
+        return accountType;
+    }
 
-  public void setAccountType(AccountType accountType) {
-    this.accountType = accountType;
-  }
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
 
-  public int getMobileNumber() {
-    return mobileNumber;
-  }
+    public Account(String accountName, int accountNumber, int balance, String accountType, String email, int mobileNumber, int password) {
+        this.accountName = accountName;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.mobileNumber = mobileNumber;
+        this.email = email;
+        this.accountType = accountType;
+        this.password = password;
 
-  public void setMobileNumber(int mobileNumber) {
-    this.mobileNumber = mobileNumber;
-  }
+    }
 
+    public String getString() {
+        return accountType;
+    }
 
+    public void setString(String accountType) {
+        this.accountType = accountType;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public int getMobileNumber() {
+        return mobileNumber;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public void setMobileNumber(int mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
 
-  public int getId() {
-    return id;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  @PrimaryKey(autoGenerate = true)
-  private int id;
+    public int getId() {
+        return id;
+    }
 
-  public Account(String accountName, int accountNumber, int balance,AccountType accountType,String email,int mobileNumber,int password) {
-    this.accountName = accountName;
-    this.accountNumber = accountNumber;
-    this.balance = balance;
-    this.mobileNumber =mobileNumber;
-    this.email=email;
-    this.accountType=accountType;
-    this.password=password;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  }
+    public int getPassword() {
+        return password;
+    }
 
-  public int getPassword() {
-    return password;
-  }
+    public void setPassword(int password) {
+        this.password = password;
+    }
 
-  public void setPassword(int password) {
-    this.password = password;
-  }
+    public String getAccountName() {
+        return accountName;
+    }
 
-  public String getAccountName() {
-    return accountName;
-  }
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
 
-  public void setAccountName(String accountName) {
-    this.accountName = accountName;
-  }
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
-  public int getAccountNumber() {
-    return accountNumber;
-  }
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 
-  public void setAccountNumber(int accountNumber) {
-    this.accountNumber = accountNumber;
-  }
+    public int getBalance() {
+        return balance;
+    }
 
-  public int getBalance() {
-    return balance;
-  }
-
-  public void setBalance(int balance) {
-    this.balance = balance;
-  }
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 }
