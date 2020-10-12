@@ -30,7 +30,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/transfer" />
+                app:srcCompat="@drawable/transfer"
+                android:contentDescription="TODO" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/transfer"
@@ -38,7 +39,7 @@
                 android:layout_width="311dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="56dp"
-                android:hint="Enter Amount"
+                android:hint="@string/enter_amount"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView6">
@@ -54,7 +55,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="311dp"
                 android:layout_height="60dp"
-                android:hint="Enter Account Number"
+                android:hint="@string/enter_account_number"
 
                 app:layout_constraintBottom_toTopOf="@+id/pin"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +77,7 @@
                 android:layout_width="311dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="36dp"
-                android:hint="Enter PIN"
+                android:hint="@string/enter_pin"
                 app:layout_constraintBottom_toTopOf="@+id/transferButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.513"
@@ -98,7 +99,7 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:drawableLeft="@drawable/ic_baseline_remove_circle_outline_24"
 
-                android:text="Transfer Amount"
+                android:text="@string/transfer_amount"
                 android:textColor="#F8F4F4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

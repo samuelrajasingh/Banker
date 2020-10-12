@@ -13,7 +13,7 @@ public class Account {
     private String accountName;
     private int accountNumber;
     private int balance;
-    private int mobileNumber;
+    private String mobileNumber;
 
     private String accountType;
     private String email;
@@ -29,7 +29,7 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public Account(String accountName, int accountNumber, int balance, String accountType, String email, int mobileNumber, int password) {
+    public Account(String accountName, int accountNumber, int balance, String accountType, String email, String mobileNumber, int password) {
         this.accountName = accountName;
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -48,11 +48,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public int getMobileNumber() {
+    public String getMobileNumber() {
         return mobileNumber;
     }
 
-    public void setMobileNumber(int mobileNumber) {
+    public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
 

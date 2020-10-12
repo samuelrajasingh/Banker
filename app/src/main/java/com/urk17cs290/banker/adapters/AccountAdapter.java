@@ -34,8 +34,12 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
     public void onBindViewHolder(@NonNull AccountHolder holder, int position) {
         Account currentAccount = accounts.get(position);
         holder.textViewAccountName.setText(currentAccount.getAccountName());
-        holder.textViewAccountNumber.setText(currentAccount.getAccountNumber());
+        holder.textViewAccountNumber.setText(String.valueOf(currentAccount.getAccountNumber()));
         holder.textViewBalance.setText(String.valueOf(currentAccount.getBalance()));
+        holder.textViewMobile.setText(String.valueOf(currentAccount.getMobileNumber()));
+        holder.textViewEmail.setText(currentAccount.getEmail());
+        holder.textViewAccountType.setText(currentAccount.getAccountType());
+
     }
 
     @Override
@@ -64,12 +68,18 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
         private TextView textViewAccountName;
         private TextView textViewAccountNumber;
         private TextView textViewBalance;
+        private TextView textViewEmail;
+        private TextView textViewMobile;
+        private TextView textViewAccountType;
 
         public AccountHolder(View itemView) {
             super(itemView);
             textViewAccountName = itemView.findViewById(R.id.text_view_account_name);
             textViewAccountNumber = itemView.findViewById(R.id.text_view_account_number);
             textViewBalance = itemView.findViewById(R.id.text_view_balance);
+            textViewAccountType =itemView.findViewById(R.id.text_view_account_type);
+            textViewEmail = itemView.findViewById(R.id.text_view_account_email);
+            textViewMobile=itemView.findViewById(R.id.text_view_account_mobile);
 
             itemView.setOnClickListener(
                     v -> {

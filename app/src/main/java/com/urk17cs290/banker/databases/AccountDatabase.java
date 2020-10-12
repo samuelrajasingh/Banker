@@ -51,9 +51,9 @@ public abstract class AccountDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            accountDao.insert(new Account("User 1", 101, 100, "SAVINGS_ACCOUNT", "user1@a.b", 12345678, 101));
-            accountDao.insert(new Account("User 2", 102, 200, "CURRENT_ACCOUNT", "user2@a.b", 1234, 102));
-            accountDao.insert(new Account("User 3", 103, 300, "FIXED_DEPOSIT", "user3@a.b", 6543, 103));
+            accountDao.insert(new Account("User 1", 101, 100, "SAVINGS ACCOUNT", "user1@a.b", "9123456789", 1001));
+            accountDao.insert(new Account("User 2", 102, 200, "CURRENT ACCOUNT", "user2@a.b", "1234567890", 1002));
+            accountDao.insert(new Account("User 3", 103, 300, "FIXED DEPOSIT", "user3@a.b", "9087654321", 1003));
             return null;
         }
     }

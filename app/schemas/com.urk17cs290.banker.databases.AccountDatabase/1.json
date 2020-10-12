@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "0df0367e1d061f83e514e86e82df7773",
+    "identityHash": "423954e4766402b59fabcf64abfefe1c",
     "entities": [
       {
         "tableName": "account_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`accountName` TEXT, `accountNumber` INTEGER NOT NULL, `balance` INTEGER NOT NULL, `mobileNumber` INTEGER NOT NULL, `accountType` TEXT, `email` TEXT, `password` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`accountName` TEXT, `accountNumber` INTEGER NOT NULL, `balance` INTEGER NOT NULL, `mobileNumber` TEXT, `accountType` TEXT, `email` TEXT, `password` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
         "fields": [
           {
             "fieldPath": "accountName",
@@ -29,8 +29,8 @@
           {
             "fieldPath": "mobileNumber",
             "columnName": "mobileNumber",
-            "affinity": "INTEGER",
-            "notNull": true
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "accountType",
@@ -70,7 +70,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0df0367e1d061f83e514e86e82df7773')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '423954e4766402b59fabcf64abfefe1c')"
     ]
   }
 }

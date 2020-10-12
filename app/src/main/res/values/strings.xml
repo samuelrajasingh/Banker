@@ -20,6 +20,10 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="account_type">Account type</string>
     <string name="account_email">Email</string>
+    <string name="enter_account_number">Enter Account Number</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="transfer_amount">Transfer Amount</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
         <item>Current Account</item>

@@ -8,12 +8,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.urk17cs290.banker.MainActivity;
 import com.urk17cs290.banker.R;
 
 public class DebitAccount extends AppCompatActivity {
     Button b;
-    EditText input;
+    TextInputLayout input;
     Intent myintent;
 
     @Override
