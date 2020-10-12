@@ -1,20 +1,16 @@
 package com.urk17cs290.banker.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.urk17cs290.banker.MainActivity;
 import com.urk17cs290.banker.R;
 
 public class DebitAccount extends AppCompatActivity {
     Button b;
     TextInputLayout input;
-    Intent myintent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +18,12 @@ public class DebitAccount extends AppCompatActivity {
         setContentView(R.layout.activity_debit_account);
         b = findViewById(R.id.debitButton);
         input = findViewById(R.id.debit);
-        myintent = new Intent(getApplicationContext(), MainActivity.class);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*TODO
-                 * diplay a toast debited successfully
-                 * update to database
-                 * */
-                startActivity(myintent);
-            }
+        b.setOnClickListener(view -> {
+            /*TODO
+             * diplay a toast debited successfully
+             * update to database
+             * */
+            finish();
         });
     }
 }

@@ -27,7 +27,7 @@ public class CreditAccount extends AppCompatActivity {
              * diplay a toast credited successfully
              * update to database
              * */
-            startActivity(myintent);
+            finish();
         });
     }
 }
