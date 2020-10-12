@@ -21,14 +21,6 @@ public class Account {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    public String getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
-
     public Account(String accountName, int accountNumber, int balance, String accountType, String email, String mobileNumber, int password) {
         this.accountName = accountName;
         this.accountNumber = accountNumber;
@@ -38,6 +30,14 @@ public class Account {
         this.accountType = accountType;
         this.password = password;
 
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
     }
 
     public String getString() {

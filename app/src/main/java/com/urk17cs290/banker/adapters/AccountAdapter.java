@@ -77,9 +77,9 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
             textViewAccountName = itemView.findViewById(R.id.text_view_account_name);
             textViewAccountNumber = itemView.findViewById(R.id.text_view_account_number);
             textViewBalance = itemView.findViewById(R.id.text_view_balance);
-            textViewAccountType =itemView.findViewById(R.id.text_view_account_type);
+            textViewAccountType = itemView.findViewById(R.id.text_view_account_type);
             textViewEmail = itemView.findViewById(R.id.text_view_account_email);
-            textViewMobile=itemView.findViewById(R.id.text_view_account_mobile);
+            textViewMobile = itemView.findViewById(R.id.text_view_account_mobile);
 
             itemView.setOnClickListener(
                     v -> {
