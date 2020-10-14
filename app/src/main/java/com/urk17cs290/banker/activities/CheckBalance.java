@@ -53,10 +53,7 @@ public class CheckBalance extends AppCompatActivity {
                  * diplay a toast debited successfully
                  * update to database
                  * */
-                int accountNumber;
-                accountNumber = Integer.parseInt(String.valueOf(ac.getEditText().getText().toString()));
-                int pin;
-                pin = Integer.parseInt(String.valueOf(pass.getEditText().getText()));
+
 
                 AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
                 LiveData<Account> account = accountViewModel.search(accountNumber);
