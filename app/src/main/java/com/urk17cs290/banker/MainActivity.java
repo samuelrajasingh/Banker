@@ -16,6 +16,7 @@ import com.urk17cs290.banker.activities.CheckBalance;
 import com.urk17cs290.banker.activities.CreateAccount;
 import com.urk17cs290.banker.activities.CreditAccount;
 import com.urk17cs290.banker.activities.DebitAccount;
+import com.urk17cs290.banker.activities.Login;
 import com.urk17cs290.banker.activities.SplashScreen;
 import com.urk17cs290.banker.activities.TransferAmount;
 
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button_create_account:
                 Intent a = new Intent(this, CreateAccount.class);
                 startActivity(a);
+                break;
+            case R.id.button_login:
+                Intent l = new Intent(this, Login.class);
+                startActivity(l);
                 break;
             case R.id.button_check_balance:
                 Intent b = new Intent(this, CheckBalance.class);
