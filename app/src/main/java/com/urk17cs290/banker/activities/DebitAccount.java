@@ -18,8 +18,9 @@ public class DebitAccount extends AppCompatActivity {
     SharedPreferences.Editor editor;
     int password;
     Boolean isLoggedin;
-    long accountNumber;
+    int accountNumber;
     Intent intent;
+    //hey suraj do u hv ur phone in silent no
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,7 @@ public class DebitAccount extends AppCompatActivity {
         b = findViewById(R.id.debitButton);
         input = findViewById(R.id.debit);
         isLoggedin = myprefs.getBoolean("isLoggedin",false);
-        accountNumber = myprefs.getLong("accountNumber",000000);
+        accountNumber = myprefs.getInt("accountNumber",000000);
         password = myprefs.getInt("password",000);
         intent = new Intent(getApplicationContext(),Login.class);
 
