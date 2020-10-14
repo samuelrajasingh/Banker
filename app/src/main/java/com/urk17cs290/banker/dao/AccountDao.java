@@ -27,7 +27,7 @@ public interface AccountDao {
     void update(Account account);
 
     @Query("SELECT * FROM account_table WHERE accountNumber=:num")
-    Cursor search(int num);
+    Account search(int num);
 
     @Delete
     void delete(Account account);
@@ -37,4 +37,6 @@ public interface AccountDao {
 
     @Query("SELECT * FROM account_table")
     LiveData<List<Account>> getAllAccounts();
+
+
 }

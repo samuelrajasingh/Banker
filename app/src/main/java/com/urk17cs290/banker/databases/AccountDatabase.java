@@ -34,7 +34,7 @@ public abstract class AccountDatabase extends RoomDatabase {
                     Room.databaseBuilder(
                             context.getApplicationContext(), AccountDatabase.class, "Account_database")
                             .fallbackToDestructiveMigration()
-                            .addCallback(roomCallback)
+                            .addCallback(roomCallback).allowMainThreadQueries()
                             .build();
         }
         return instance;

@@ -5,7 +5,6 @@
 package com.urk17cs290.banker.repos;
 
 import android.app.Application;
-import android.database.Cursor;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
@@ -49,8 +48,10 @@ public class AccountRepository {
         return allAccounts;
     }
 
-    public Cursor search(int accountNumber){
-        return accountDao.search(accountNumber);
+    public Account search(int accountNumber){
+
+        return  accountDao.search(accountNumber);
+
     }
     private static class InsertAccountAsyncTask extends AsyncTask<Account, Void, Void> {
         private AccountDao accountDao;
@@ -77,6 +78,18 @@ public class AccountRepository {
         protected Void doInBackground(Account... accounts) {
             accountDao.update(accounts[0]);
             return null;
+        }
+    }
+    private static class SearchAccountAsyncTask extends AsyncTask<Account, Void, Account> {
+        private AccountDao accountDao;
+
+        private SearchAccountAsyncTask(AccountDao accountDao) {
+            this.accountDao = accountDao;
+        }
+
+        @Override
+        protected Account doInBackground(Account... accounts) {
+            return accountDao.search(accounts[0].getAccountNumber());
         }
     }
 
