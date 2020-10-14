@@ -27,9 +27,9 @@ public class Login extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = editText_name.getEditText().toString();//email
-                String p = editText_password.getEditText().toString();
-                int password = Integer.parseInt(p);//password
+                String accountNumber = editText_name.getEditText().toString();//email
+                String pass = editText_password.getEditText().toString();
+                int password = Integer.parseInt(pass);//password
             }
         });
     }
