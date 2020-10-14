@@ -5,7 +5,7 @@
 package com.urk17cs290.banker.activities;
 
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,13 +24,11 @@ public class Login extends AppCompatActivity {
         editText_name = findViewById(R.id.text_view_account_name2);
         editText_password = findViewById(R.id.text_view_account_password2);
         b = findViewById(R.id.button_login2);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String accountNumber = editText_name.getEditText().toString();//email
-                String pass = editText_password.getEditText().toString();
-                int password = Integer.parseInt(pass);//password
-            }
+        b.setOnClickListener(view -> {
+            int accountNumber = Integer.parseInt(editText_name.getEditText().getText().toString());//account number
+            int pass = Integer.parseInt(editText_password.getEditText().getText().toString());//password
+            Log.e("TAG", "account number : "+accountNumber );
+            Log.e("TAG", "password : "+pass );
         });
     }
 }

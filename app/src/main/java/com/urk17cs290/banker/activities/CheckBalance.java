@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.urk17cs290.banker.R;
 import com.urk17cs290.banker.entities.Account;
 import com.urk17cs290.banker.viewmodels.AccountViewModel;
+
+import java.util.Objects;
 
 public class CheckBalance extends AppCompatActivity {
     TextView setBalance;
@@ -36,13 +39,13 @@ public class CheckBalance extends AppCompatActivity {
              * set as a string
              * */
             int accountNumber;
-            accountNumber = Integer.parseInt(String.valueOf(ac.getEditText().getText()));
+            accountNumber = Integer.parseInt(Objects.requireNonNull(ac.getEditText()).getText().toString());
             int pin;
-            pin = Integer.parseInt(String.valueOf(pass.getEditText().getText()));
+            pin = Integer.parseInt(Objects.requireNonNull(pass.getEditText()).getText().toString());
 
             AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
-            Account account = accountViewModel.search(accountNumber);
-            Log.e("TAG", "onCreate: accounts " + account);
+            LiveData<Account> account = accountViewModel.search(accountNumber);
+            Log.e("TAG", "onCreate: accounts " + account.getValue());
         });
     }
 }
