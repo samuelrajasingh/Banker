@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Accounts">
-
-
-        </activity>
+        <activity android:name=".activities.Login"></activity>
+        <activity android:name=".activities.Accounts" />
         <activity android:name=".activities.TransferAmount" />
         <activity android:name=".activities.DebitAccount" />
         <activity android:name=".activities.CreditAccount" />
