@@ -82,18 +82,18 @@ public class AccountRepository {
         }
     }
 
-    private static class SearchAccountAsyncTask extends AsyncTask<Account, Void, Account> {
-        private AccountDao accountDao;
-
-        private SearchAccountAsyncTask(AccountDao accountDao) {
-            this.accountDao = accountDao;
-        }
-
-        @Override
-        protected Account doInBackground(Account... accounts) {
-            return accountDao.search(accounts[0].getAccountNumber());
-        }
-    }
+//    private static class SearchAccountAsyncTask extends AsyncTask<Account, Void, Account> {
+//        private AccountDao accountDao;
+//
+//        private SearchAccountAsyncTask(AccountDao accountDao) {
+//            this.accountDao = accountDao;
+//        }
+//
+//        @Override
+//        protected Account doInBackground(Account... accounts) {
+//            return accountDao.search(accounts[0].getAccountNumber());
+//        }
+//    }
 
     private static class DeleteAccountAsyncTask extends AsyncTask<Account, Void, Void> {
         private AccountDao accountDao;
