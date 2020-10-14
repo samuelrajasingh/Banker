@@ -48,7 +48,7 @@ public class AccountRepository {
         return allAccounts;
     }
 
-    public Account search(int accountNumber) {
+    public LiveData<Account> search(int accountNumber) {
 
         return accountDao.search(accountNumber);
 

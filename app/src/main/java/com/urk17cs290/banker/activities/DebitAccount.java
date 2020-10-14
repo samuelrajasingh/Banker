@@ -20,30 +20,31 @@ public class DebitAccount extends AppCompatActivity {
     Boolean isLoggedin;
     int accountNumber;
     Intent intent;
+
     //hey suraj do u hv ur phone in silent no
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_debit_account);
-        myprefs = getSharedPreferences("myprefs",MODE_PRIVATE);
-        editor =  myprefs.edit();
+        myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
+        editor = myprefs.edit();
         b = findViewById(R.id.debitButton);
         input = findViewById(R.id.debit);
-        isLoggedin = myprefs.getBoolean("isLoggedin",false);
-        accountNumber = myprefs.getInt("accountNumber",000000);
-        password = myprefs.getInt("password",000);
-        intent = new Intent(getApplicationContext(),Login.class);
+        isLoggedin = myprefs.getBoolean("isLoggedin", false);
+        accountNumber = myprefs.getInt("accountNumber", 000000);
+        password = myprefs.getInt("password", 000);
+        intent = new Intent(getApplicationContext(), Login.class);
 
         b.setOnClickListener(view -> {
 
-            if(isLoggedin){
+            if (isLoggedin) {
                 /*TODO
                  * diplay a toast debited successfully
                  * update to database
                  * */
 
 
-            }else{
+            } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

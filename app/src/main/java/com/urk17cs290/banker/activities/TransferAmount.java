@@ -15,12 +15,13 @@ public class TransferAmount extends AppCompatActivity {
     TextInputLayout amount, pin, accountNumber;
     SharedPreferences myprefs;
     SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer_amount);
-        myprefs = getSharedPreferences("myprefs",MODE_PRIVATE);
-        editor =  myprefs.edit();
+        myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
+        editor = myprefs.edit();
         amount = findViewById(R.id.transfer);
         pin = findViewById(R.id.pin);
         b = findViewById(R.id.transferButton);

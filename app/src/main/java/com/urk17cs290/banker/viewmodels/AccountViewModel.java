@@ -41,7 +41,7 @@ public class AccountViewModel extends AndroidViewModel {
     /*
      * function to delete a account object from the room database.
      */
-    public Account search(int accountNumber) {
+    public LiveData<Account> search(int accountNumber) {
         return repository.search(accountNumber);
 
     }
