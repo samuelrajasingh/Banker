@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent a = new Intent(this, CreateAccount.class);
                 startActivity(a);
                 break;
-            case R.id.button_login:
+            /*case R.id.button_login:
                 Intent l = new Intent(this, Login.class);
                 startActivity(l);
-                break;
+                break;*/
             case R.id.button_check_balance:
                 Intent b = new Intent(this, CheckBalance.class);
                 startActivity(b);

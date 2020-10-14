@@ -11,13 +11,14 @@ import com.urk17cs290.banker.R;
 
 public class SplashScreen extends AppCompatActivity {
     public static boolean isAdmin = false;
-    Intent intent;
+    Intent intent,loginIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         intent = new Intent(getApplicationContext(), MainActivity.class);
+        loginIntent = new Intent(getApplicationContext(),Login.class);
 
     }
 
@@ -29,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
                 break;
             case R.id.button_user:
                 isAdmin = false;
-                startActivity(intent);
+                startActivity(loginIntent);
                 break;
             default:
                 break;
