@@ -37,11 +37,12 @@ public class AccountViewModel extends AndroidViewModel {
     public void update(Account account) {
         repository.update(account);
     }
+
     /*
      * function to delete a account object from the room database.
      */
-    public Account search(int accountNumber){
-        return  repository.search(accountNumber);
+    public Account search(int accountNumber) {
+        return repository.search(accountNumber);
 
     }
 

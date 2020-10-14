@@ -4,8 +4,6 @@
 
 package com.urk17cs290.banker.dao;
 
-import android.database.Cursor;
-
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;

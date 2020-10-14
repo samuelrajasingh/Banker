@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -18,12 +17,10 @@ import com.urk17cs290.banker.R;
 import com.urk17cs290.banker.entities.Account;
 import com.urk17cs290.banker.viewmodels.AccountViewModel;
 
-import java.util.List;
-
 public class CheckBalance extends AppCompatActivity {
     TextView setBalance;
     Button checkBalance;
-    TextInputLayout ac,pass;
+    TextInputLayout ac, pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +42,7 @@ public class CheckBalance extends AppCompatActivity {
 
             AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
             Account account = accountViewModel.search(accountNumber);
-            Log.e("TAG", "onCreate: accounts "+account);
+            Log.e("TAG", "onCreate: accounts " + account);
         });
     }
 }

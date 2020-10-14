@@ -48,11 +48,12 @@ public class AccountRepository {
         return allAccounts;
     }
 
-    public Account search(int accountNumber){
+    public Account search(int accountNumber) {
 
-        return  accountDao.search(accountNumber);
+        return accountDao.search(accountNumber);
 
     }
+
     private static class InsertAccountAsyncTask extends AsyncTask<Account, Void, Void> {
         private AccountDao accountDao;
 
@@ -80,6 +81,7 @@ public class AccountRepository {
             return null;
         }
     }
+
     private static class SearchAccountAsyncTask extends AsyncTask<Account, Void, Account> {
         private AccountDao accountDao;
 
