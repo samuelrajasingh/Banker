@@ -16,7 +16,6 @@ import com.urk17cs290.banker.activities.CheckBalance;
 import com.urk17cs290.banker.activities.CreateAccount;
 import com.urk17cs290.banker.activities.CreditAccount;
 import com.urk17cs290.banker.activities.DebitAccount;
-import com.urk17cs290.banker.activities.Login;
 import com.urk17cs290.banker.activities.SplashScreen;
 import com.urk17cs290.banker.activities.TransferAmount;
 

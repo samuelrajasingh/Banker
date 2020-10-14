@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -38,23 +37,23 @@ public class CreditAccount extends AppCompatActivity {
         input = findViewById(R.id.credit);
         int amount = Integer.parseInt(input.getEditText().getText().toString());
         myintent = new Intent(getApplicationContext(), MainActivity.class);
-        myprefs = getSharedPreferences("myprefs",MODE_PRIVATE);
-        editor =  myprefs.edit();
-        isLoggedin = myprefs.getBoolean("isLoggedin",false);
-        accountNumber = myprefs.getInt("accountNumber",000);
-        password = myprefs.getInt("password",000);
-        intent = new Intent(getApplicationContext(),Login.class);
+        myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
+        editor = myprefs.edit();
+        isLoggedin = myprefs.getBoolean("isLoggedin", false);
+        accountNumber = myprefs.getInt("accountNumber", 000);
+        password = myprefs.getInt("password", 000);
+        intent = new Intent(getApplicationContext(), Login.class);
         b.setOnClickListener(view -> {
 
-            if(isLoggedin && accountNumber!=000 && password != 000){
+            if (isLoggedin && accountNumber != 000 && password != 000) {
                 // add balance to database for the specified account Number and update the database
                 accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
                 LiveData<Account> account = accountViewModel.search(accountNumber);
-                account.getValue().setBalance(account.getValue().getBalance()+amount);
+                account.getValue().setBalance(account.getValue().getBalance() + amount);
 
-                Toast.makeText(this, "Account credited with "+amount, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Account credited with " + amount, Toast.LENGTH_SHORT).show();
 
-            }else{
+            } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
