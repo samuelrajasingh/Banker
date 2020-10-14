@@ -37,7 +37,7 @@ public class CheckBalance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_balance);
         setBalance = findViewById(R.id.showBalance); // textview
-
+        myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);//shared preference
         checkBalance = findViewById(R.id.check_balance_button); // button
         isLoggedin = myprefs.getBoolean("isLoggedin",false);
         accountNumber = myprefs.getInt("accountNumber",000000);
@@ -53,15 +53,12 @@ public class CheckBalance extends AppCompatActivity {
                  * diplay a toast debited successfully
                  * update to database
                  * */
-                int accountNumber;
-                accountNumber = Integer.parseInt(String.valueOf(ac.getEditText().getText().toString()));
-                int pin;
-                pin = Integer.parseInt(String.valueOf(pass.getEditText().getText()));
 
                 AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
                 LiveData<Account> account = accountViewModel.search(accountNumber);
                 Log.e("TAG", "onCreate: accounts " + account.getValue());
-
+                int initial = account.getValue().getBalance();
+                setBalance.setText(initial);
             }else{
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
