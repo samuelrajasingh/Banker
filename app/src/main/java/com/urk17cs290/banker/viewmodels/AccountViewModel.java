@@ -5,7 +5,6 @@
 package com.urk17cs290.banker.viewmodels;
 
 import android.app.Application;
-import android.database.Cursor;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
@@ -39,7 +38,13 @@ public class AccountViewModel extends AndroidViewModel {
         repository.update(account);
     }
 
-    public Cursor search(int accountNumber){ return repository.search(accountNumber);}
+    /*
+     * function to delete a account object from the room database.
+     */
+    public Account search(int accountNumber) {
+        return repository.search(accountNumber);
+
+    }
 
     /*
      * function to delete a account object from the room database.

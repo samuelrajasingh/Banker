@@ -4,8 +4,6 @@
 
 package com.urk17cs290.banker.dao;
 
-import android.database.Cursor;
-
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -27,7 +25,7 @@ public interface AccountDao {
     void update(Account account);
 
     @Query("SELECT * FROM account_table WHERE accountNumber=:num")
-    Cursor search(int num);
+    Account search(int num);
 
     @Delete
     void delete(Account account);
@@ -37,4 +35,6 @@ public interface AccountDao {
 
     @Query("SELECT * FROM account_table")
     LiveData<List<Account>> getAllAccounts();
+
+
 }

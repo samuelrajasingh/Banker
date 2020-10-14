@@ -25,7 +25,7 @@ public class Accounts extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.accounts_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(false);
         final AccountAdapter adapter = new AccountAdapter();
         recyclerView.setAdapter(adapter);
 
