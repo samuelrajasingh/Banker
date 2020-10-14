@@ -5,6 +5,7 @@
 package com.urk17cs290.banker.repos;
 
 import android.app.Application;
+import android.database.Cursor;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
@@ -48,6 +49,9 @@ public class AccountRepository {
         return allAccounts;
     }
 
+    public Cursor search(int accountNumber){
+        return accountDao.search(accountNumber);
+    }
     private static class InsertAccountAsyncTask extends AsyncTask<Account, Void, Void> {
         private AccountDao accountDao;
 
