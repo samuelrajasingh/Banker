@@ -24,6 +24,10 @@ public interface AccountDao {
     @Update
     void update(Account account);
 
+    /**
+     * @param num account Number to search
+     * @return Account object wrapped in LiveData
+     */
     @Query("SELECT * FROM account_table WHERE accountNumber=:num")
     LiveData<Account> search(int num);
 

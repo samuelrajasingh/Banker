@@ -32,7 +32,7 @@ public class DebitAccount extends AppCompatActivity {
         b = findViewById(R.id.debitButton);
         input = findViewById(R.id.debit);
         isLoggedin = myprefs.getBoolean("isLoggedin", false);
-        accountNumber = myprefs.getInt("accountNumber", 000000);
+        accountNumber = myprefs.getInt("accountNumber", 000);
         password = myprefs.getInt("password", 000);
         intent = new Intent(getApplicationContext(), Login.class);
 

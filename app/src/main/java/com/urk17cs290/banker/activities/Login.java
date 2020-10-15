@@ -7,26 +7,25 @@ package com.urk17cs290.banker.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.urk17cs290.banker.MainActivity;
 import com.urk17cs290.banker.R;
+import com.urk17cs290.banker.entities.Account;
+import com.urk17cs290.banker.viewmodels.AccountViewModel;
 
 import java.util.Objects;
 
 public class Login extends AppCompatActivity {
-    TextInputLayout editText_name, editText_password;
-    Button b;
+    TextInputLayout inputlayoutAccNum, inputLayoutPassword;
     Intent intent;
-    String email;
-    int password;
     Boolean isLoggedin;
-    int accountNumber;
     SharedPreferences myprefs;
     SharedPreferences.Editor editor;
 
@@ -34,36 +33,34 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        editText_name = findViewById(R.id.text_view_account_name2);
-        editText_password = findViewById(R.id.text_view_account_password2);
-        b = findViewById(R.id.button_login2);
+        inputlayoutAccNum = findViewById(R.id.text_view_account_number);
+        inputLayoutPassword = findViewById(R.id.text_view_account_password);
+        Button b = findViewById(R.id.login);
         intent = new Intent(getApplicationContext(), MainActivity.class);
         myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);//shared preference
-        editor = myprefs.edit();//editor for shared preference
         isLoggedin = false;
         b.setOnClickListener(view -> {
 
-            email = Objects.requireNonNull(editText_name.getEditText()).getText().toString();//email
-            String p = Objects.requireNonNull(editText_password.getEditText()).getText().toString();
+            int accNum = Integer.parseInt(Objects.requireNonNull(inputlayoutAccNum.getEditText()).getText().toString());//email
+            int p = Integer.parseInt(Objects.requireNonNull(inputLayoutPassword.getEditText()).getText().toString());
 
-
-            try {
-                password = Integer.parseInt(p);//password
-
-
-            } catch (Exception e) {
-            }
             /* todo
              * get data from database and match and if true, then store in shared preference
              * */
-            if (accountNumber==0 && password == 1234 && !isLoggedin) {
+            AccountViewModel accountViewModel
+                    = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
+
+            LiveData<Account> accountLiveData = accountViewModel.search(accNum);
+            Account acount = accountLiveData.getValue();
+
+            if (accountLiveData.getValue().getPassword() == p) {
+                editor = myprefs.edit();//editor for shared preference
                 isLoggedin = true;
 //                editor.putString("email",email);
-                editor.putInt("password", password);
+                editor.putInt("password", p);
                 editor.putBoolean("isLoggedin", isLoggedin);
-                editor.putInt("accountNumber", accountNumber);
+                editor.putInt("accountNumber", accNum);
                 editor.apply();
-                Log.i("boolean",isLoggedin.toString());
                 startActivity(intent);
 
 
