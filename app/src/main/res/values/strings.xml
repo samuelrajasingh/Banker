@@ -24,7 +24,6 @@
     <string name="enter_amount">Enter Amount</string>
     <string name="enter_pin">Enter PIN</string>
     <string name="transfer_amount">Transfer Amount</string>
-    <string name="enter_amount">Enter Amount</string>
     <string name="credit_your_account">Credit Your Account</string>
     <string-array name="accounts">
         <item>Savings  Account</item>
