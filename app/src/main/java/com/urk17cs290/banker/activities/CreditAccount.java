@@ -3,6 +3,7 @@ package com.urk17cs290.banker.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class CreditAccount extends AppCompatActivity {
         myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
         editor = myprefs.edit();
         isLoggedin = myprefs.getBoolean("isLoggedin", false);
+
         accountNumber = myprefs.getInt("accountNumber", 000);
         password = myprefs.getInt("password", 000);
         intent = new Intent(getApplicationContext(), Login.class);

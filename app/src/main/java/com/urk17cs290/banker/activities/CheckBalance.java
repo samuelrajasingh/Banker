@@ -43,6 +43,7 @@ public class CheckBalance extends AppCompatActivity {
         accountNumber = myprefs.getInt("accountNumber",000000);
         password = myprefs.getInt("password",000);
         intent = new Intent(getApplicationContext(),Login.class);
+        Log.i("boolean",isLoggedin.toString());
         checkBalance.setOnClickListener(view -> {
             /*TODO
              * get balance
@@ -53,6 +54,7 @@ public class CheckBalance extends AppCompatActivity {
                  * diplay a toast debited successfully
                  * update to database
                  * */
+                Log.i("boolean",isLoggedin.toString());
 
 
                 AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);

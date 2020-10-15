@@ -7,6 +7,7 @@ package com.urk17cs290.banker.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -55,13 +56,14 @@ public class Login extends AppCompatActivity {
             /* todo
              * get data from database and match and if true, then store in shared preference
              * */
-            if (password == 1234 && !isLoggedin) {
+            if (accountNumber==0 && password == 1234 && !isLoggedin) {
                 isLoggedin = true;
 //                editor.putString("email",email);
                 editor.putInt("password", password);
                 editor.putBoolean("isLoggedin", isLoggedin);
                 editor.putInt("accountNumber", accountNumber);
                 editor.apply();
+                Log.i("boolean",isLoggedin.toString());
                 startActivity(intent);
 
 

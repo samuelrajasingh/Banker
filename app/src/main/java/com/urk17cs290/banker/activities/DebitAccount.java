@@ -3,6 +3,7 @@ package com.urk17cs290.banker.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -43,7 +44,7 @@ public class DebitAccount extends AppCompatActivity {
                  * update to database
                  * */
 
-
+                Log.i("boolean",isLoggedin.toString());
             } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
