@@ -8,16 +8,17 @@
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/login_frame"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_frame">
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_login"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:onClick="onClick"
-        android:text="Login" />
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_login"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:text="Login" />
     </FrameLayout>
 
     <com.google.android.material.button.MaterialButton

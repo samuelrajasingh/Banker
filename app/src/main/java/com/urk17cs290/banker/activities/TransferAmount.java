@@ -21,7 +21,7 @@ public class TransferAmount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer_amount);
         myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
-        editor = myprefs.edit();
+//        editor = myprefs.edit();
         amount = findViewById(R.id.transfer);
         pin = findViewById(R.id.pin);
         b = findViewById(R.id.transferButton);

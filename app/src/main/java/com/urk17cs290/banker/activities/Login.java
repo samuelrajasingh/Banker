@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity {
             AccountViewModel accountViewModel
                     = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
 
-             LiveData<Account>accountLiveData = accountViewModel.search(accNum);
+            LiveData<Account> accountLiveData = accountViewModel.search(accNum);
             Account acount = accountLiveData.getValue();
 
             if (accountLiveData.getValue().getPassword() == p) {
