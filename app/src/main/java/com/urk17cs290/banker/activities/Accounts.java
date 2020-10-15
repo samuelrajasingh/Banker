@@ -30,8 +30,6 @@ public class Accounts extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
-
-        //accountViewModel = new  ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(AccountViewModel.class);
         accountViewModel.getAllAccounts().observe(this, adapter::setAccounts);
 
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,

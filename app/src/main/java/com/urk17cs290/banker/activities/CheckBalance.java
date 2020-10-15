@@ -23,9 +23,8 @@ public class CheckBalance extends AppCompatActivity {
     TextView textViewBalance;
     Button checkBalance;
     SharedPreferences myprefs;
-//    SharedPreferences.Editor editor;
     int password;
-    Boolean isLoggedin;
+    boolean isLoggedin;
     int accountNumber;
     Intent intent;
 

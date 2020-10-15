@@ -51,9 +51,6 @@ public class AccountRepository {
     public Account search(int accountNumber) {
 
         return accountDao.search(accountNumber);
-//        Account account = new Account();
-//        account.setAccountNumber(accountNumber);
-//        SearchAccountAsyncTask accountAsyncTask = new SearchAccountAsyncTask(accountDao).execute(accountNumber);
 
     }
 
@@ -83,31 +80,6 @@ public class AccountRepository {
             accountDao.update(accounts[0]);
             return null;
         }
-    }
-
-
-    private static class SearchAccountAsyncTask extends AsyncTask<Integer, Void, Account> {
-        private AccountDao accountDao;
-
-        private SearchAccountAsyncTask(AccountDao accountDao) {
-            this.accountDao = accountDao;
-        }
-
-        @Override
-        protected Account doInBackground(Integer... integers) {
-            return accountDao.search(integers[0]);
-
-        }
-
-
-//
-//        @Override
-//        protected Account doInBackground(Account... accounts) {
-//            Log.e("TAG", "doInBackground: "+accountDao.search(accounts[0].getAccountNumber()) );
-//            return accountDao.search(accounts[0].getAccountNumber());
-//        }
-
-
     }
 
 

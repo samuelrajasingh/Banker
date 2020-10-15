@@ -30,14 +30,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/credit" />
+                app:srcCompat="@drawable/credit"
+                android:contentDescription="@string/credit_your_account" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/credit"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="311dp"
                 android:layout_height="60dp"
-                android:hint="Enter Amount"
+                android:hint="@string/enter_amount"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

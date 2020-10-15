@@ -23,9 +23,9 @@ public class CreateAccount extends AppCompatActivity {
     TextInputLayout email;
     TextInputLayout password;
     TextInputLayout mobile;
-    TextInputLayout account_num, acc_balance;
+    TextInputLayout account_num;
+    TextInputLayout acc_balance;
     Spinner accounttype;
-    //    Intent myintent;
     String ac_type_value;
     private AccountViewModel accountViewModel;
 
@@ -73,8 +73,7 @@ public class CreateAccount extends AppCompatActivity {
                         accountViewModel.insert(account);
                         Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show();
                         finish();
-//                    myintent = new Intent(getApplicationContext(), MainActivity.class);
-//                    startActivity(myintent);
+
                     } catch (NullPointerException e) {
                         Log.e("TAG", "TextView is Empty ");
                         Toast.makeText(this, "Please insert a values on all textboxes", Toast.LENGTH_SHORT).show();
