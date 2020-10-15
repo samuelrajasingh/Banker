@@ -33,7 +33,3 @@ Happ/src/main/java/com/urk17cs290/banker/viewmodels/AccountViewModel.java,5/a/5
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-n
->app/src/main/java/com/urk17cs290/banker/utlis/AccountType.java,3/5/35a7de9009655ce8e7fc9873ebe1ba7f34ed0b4b
-m
-=app/src/main/java/com/urk17cs290/banker/utlis/Converters.java,2/9/29d44b67abcf3cf7c7efe0d15b94b0621259f7e9

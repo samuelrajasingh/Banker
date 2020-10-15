@@ -22,7 +22,7 @@ public class DebitAccount extends AppCompatActivity {
     int accountNumber;
     Intent intent;
 
-    //hey suraj do u hv ur phone in silent no
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

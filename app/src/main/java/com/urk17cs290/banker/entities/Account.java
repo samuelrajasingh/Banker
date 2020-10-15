@@ -43,13 +43,7 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public String getString() {
-        return accountType;
-    }
 
-    public void setString(String accountType) {
-        this.accountType = accountType;
-    }
 
     public String getMobileNumber() {
         return mobileNumber;

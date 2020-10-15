@@ -15,6 +15,8 @@ import com.urk17cs290.banker.R;
 import com.urk17cs290.banker.entities.Account;
 import com.urk17cs290.banker.viewmodels.AccountViewModel;
 
+import java.util.Objects;
+
 public class CreditAccount extends AppCompatActivity {
     Button b;
     TextInputLayout input;
@@ -34,24 +36,25 @@ public class CreditAccount extends AppCompatActivity {
         setContentView(R.layout.activity_credit_account);
         b = findViewById(R.id.creditButton);
         input = findViewById(R.id.credit);
-        int amount = Integer.parseInt(input.getEditText().getText().toString());
+
         myintent = new Intent(getApplicationContext(), MainActivity.class);
         myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
-        editor = myprefs.edit();
         isLoggedin = myprefs.getBoolean("isLoggedin", false);
 
-        accountNumber = myprefs.getInt("accountNumber", 000);
         password = myprefs.getInt("password", 000);
         intent = new Intent(getApplicationContext(), Login.class);
         b.setOnClickListener(view -> {
-
-            if (isLoggedin && accountNumber != 000 && password != 000) {
+            String amtStr = input.getEditText().getText().toString() ;
+            int amount = Integer.parseInt(amtStr);
+            if (isLoggedin) {
                 // add balance to database for the specified account Number and update the database
                 accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
+                accountNumber = myprefs.getInt("accountNumber", 000);
                 Account account = accountViewModel.search(accountNumber);
                 account.setBalance(account.getBalance() + amount);
+                accountViewModel.update(account);
 
-                Toast.makeText(this, "Account credited with " + amount, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Account "+accountNumber+" credited with " + amount, Toast.LENGTH_SHORT).show();
 
             } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();

@@ -20,10 +20,10 @@ import com.urk17cs290.banker.entities.Account;
 import com.urk17cs290.banker.viewmodels.AccountViewModel;
 
 public class CheckBalance extends AppCompatActivity {
-    TextView setBalance;
+    TextView textViewBalance;
     Button checkBalance;
     SharedPreferences myprefs;
-    SharedPreferences.Editor editor;
+//    SharedPreferences.Editor editor;
     int password;
     Boolean isLoggedin;
     int accountNumber;
@@ -34,9 +34,8 @@ public class CheckBalance extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_balance);
-        setBalance = findViewById(R.id.showBalance); // textview
+        textViewBalance = findViewById(R.id.showBalance); // textview
         myprefs = getSharedPreferences("myprefs", MODE_PRIVATE);
-
         checkBalance = findViewById(R.id.check_balance_button); // button
         isLoggedin = myprefs.getBoolean("isLoggedin", false);
         accountNumber = myprefs.getInt("accountNumber", 000);
@@ -51,8 +50,8 @@ public class CheckBalance extends AppCompatActivity {
 
                 AccountViewModel accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
                 Account account = accountViewModel.search(accountNumber);
-
                 Log.e("TAG", "onCreate: accounts " + account.getBalance());
+                textViewBalance.setText(String.valueOf(account.getBalance()));
 
             } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();

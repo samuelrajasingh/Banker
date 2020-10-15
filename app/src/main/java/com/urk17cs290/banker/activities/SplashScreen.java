@@ -1,6 +1,7 @@
 package com.urk17cs290.banker.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,6 +20,8 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         intent = new Intent(getApplicationContext(), MainActivity.class);
         loginIntent = new Intent(getApplicationContext(), Login.class);
+        //SharedPreferences myprefs = getSharedPreferences("myprefs",MODE_PRIVATE);
+
 
     }
 
@@ -30,6 +33,7 @@ public class SplashScreen extends AppCompatActivity {
                 break;
             case R.id.button_user:
                 isAdmin = false;
+
                 startActivity(loginIntent);
                 break;
             default:
