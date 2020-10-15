@@ -3,12 +3,10 @@ package com.urk17cs290.banker.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -50,8 +48,8 @@ public class CreditAccount extends AppCompatActivity {
             if (isLoggedin && accountNumber != 000 && password != 000) {
                 // add balance to database for the specified account Number and update the database
                 accountViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
-                LiveData<Account> account = accountViewModel.search(accountNumber);
-                account.getValue().setBalance(account.getValue().getBalance() + amount);
+                Account account = accountViewModel.search(accountNumber);
+                account.setBalance(account.getBalance() + amount);
 
                 Toast.makeText(this, "Account credited with " + amount, Toast.LENGTH_SHORT).show();
 

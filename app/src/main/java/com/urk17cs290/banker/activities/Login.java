@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -50,10 +49,10 @@ public class Login extends AppCompatActivity {
             AccountViewModel accountViewModel
                     = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(AccountViewModel.class);
 
-            LiveData<Account> accountLiveData = accountViewModel.search(accNum);
-            Account acount = accountLiveData.getValue();
+            Account account = accountViewModel.search(accNum);
 
-            if (accountLiveData.getValue().getPassword() == p) {
+
+            if (account.getPassword() == p) {
                 editor = myprefs.edit();//editor for shared preference
                 isLoggedin = true;
 //                editor.putString("email",email);

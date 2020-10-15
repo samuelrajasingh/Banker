@@ -29,7 +29,7 @@ public interface AccountDao {
      * @return Account object wrapped in LiveData
      */
     @Query("SELECT * FROM account_table WHERE accountNumber=:num")
-    LiveData<Account> search(int num);
+    Account search(int num);
 
     @Delete
     void delete(Account account);

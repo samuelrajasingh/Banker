@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FrameLayout view_frame = findViewById(R.id.view_frame);
-        FrameLayout login_frame = findViewById(R.id.login_frame);
+//        FrameLayout login_frame = findViewById(R.id.login_frame);
         if (!SplashScreen.isAdmin)
             view_frame.setVisibility(View.GONE);
-        else login_frame.setVisibility(View.GONE);
+//        else login_frame.setVisibility(View.GONE);
 
     }
 

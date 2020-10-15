@@ -44,7 +44,7 @@ public class DebitAccount extends AppCompatActivity {
                  * update to database
                  * */
 
-                Log.i("boolean",isLoggedin.toString());
+                Log.i("boolean", isLoggedin.toString());
             } else {
                 Toast.makeText(this, "Login again", Toast.LENGTH_SHORT).show();
                 startActivity(intent);

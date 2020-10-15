@@ -48,9 +48,12 @@ public class AccountRepository {
         return allAccounts;
     }
 
-    public LiveData<Account> search(int accountNumber) {
+    public Account search(int accountNumber) {
 
         return accountDao.search(accountNumber);
+//        Account account = new Account();
+//        account.setAccountNumber(accountNumber);
+//        SearchAccountAsyncTask accountAsyncTask = new SearchAccountAsyncTask(accountDao).execute(accountNumber);
 
     }
 
@@ -82,18 +85,31 @@ public class AccountRepository {
         }
     }
 
-//    private static class SearchAccountAsyncTask extends AsyncTask<Account, Void, Account> {
-//        private AccountDao accountDao;
-//
-//        private SearchAccountAsyncTask(AccountDao accountDao) {
-//            this.accountDao = accountDao;
-//        }
+
+    private static class SearchAccountAsyncTask extends AsyncTask<Integer, Void, Account> {
+        private AccountDao accountDao;
+
+        private SearchAccountAsyncTask(AccountDao accountDao) {
+            this.accountDao = accountDao;
+        }
+
+        @Override
+        protected Account doInBackground(Integer... integers) {
+            return accountDao.search(integers[0]);
+
+        }
+
+
 //
 //        @Override
 //        protected Account doInBackground(Account... accounts) {
+//            Log.e("TAG", "doInBackground: "+accountDao.search(accounts[0].getAccountNumber()) );
 //            return accountDao.search(accounts[0].getAccountNumber());
 //        }
-//    }
+
+
+    }
+
 
     private static class DeleteAccountAsyncTask extends AsyncTask<Account, Void, Void> {
         private AccountDao accountDao;
