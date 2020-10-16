@@ -37,14 +37,14 @@ jobs:
           name: thebanker
           path: app/build/outputs/apk/debug/app-debug.apk
       - name: Upload binaries to release
-          uses: svenstaro/upload-release-action@v2
-          with:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            file: thebanker
-            asset_name: thebanker
-            tag: ${{ github.ref }}
-            overwrite: true
-            body: "This is my latest release of the banker app"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: thebanker
+          asset_name: thebanker
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my latest release of the banker app"
 
   publish:
       name: Publish binaries
