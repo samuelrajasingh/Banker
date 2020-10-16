@@ -42,7 +42,10 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - needs: apk
+        - name: Download a single artifact
+            uses: actions/download-artifact@v2
+            with:
+              name: theBanker
         - name: Upload binaries to release
           uses: svenstaro/upload-release-action@v2
           with:
