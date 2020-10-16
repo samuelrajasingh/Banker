@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build --stacktrace
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
@@ -34,5 +34,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
-          name: app
+          name: theBanker
           path: app/build/outputs/apk/debug/app-debug.apk

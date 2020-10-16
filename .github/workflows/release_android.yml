@@ -3,19 +3,16 @@ name: Android CD
 on:
   release:
     types: [created]
-name: Handle Release
+
 jobs:
-  generate:
-    name: Create release-artifacts
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@master
-      - name: Generate the artifacts
-        uses: skx/github-action-build@master
-      - name: Upload the artifacts
-        uses: skx/github-action-publish-binaries@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.f041dbaf41a2da168df340280abaf1711f92c9f1 }}
+      - uses: actions/checkout@v1
+      - uses: ncipollo/release-action@v1
         with:
-          args:
+          artifacts: "theBanker"
+          allowUpdates: true
+          body: "You can use this build to see to latest implementation of the app"
+          name: "The Banker App "
+          token: ${{ secrets.f041dbaf41a2da168df340280abaf1711f92c9f1 }}
