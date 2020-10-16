@@ -36,3 +36,21 @@ jobs:
         with:
           name: theBanker
           path: app/build/outputs/apk/debug/app-debug.apk
+
+  publish:
+      name: Publish binaries
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v2
+        - name: Build
+          run: cargo build --release
+        - name: Upload binaries to release
+          uses: svenstaro/upload-release-action@v2
+          with:
+            repo_token: ${{ secrets.f041dbaf41a2da168df340280abaf1711f92c9f1 }}
+            file: app/build/outputs/apk/debug/app-debug.apk
+            asset_name: theBanker
+            tag: ${{ github.ref }}
+            overwrite: true
+            body: "This is my latest release of the banker app"
