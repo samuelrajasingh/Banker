@@ -1,10 +1,13 @@
 
-X
-java:S2696"6Make the enclosing method "static" or remove this set.(‘ŸÓ¼üÿÿÿÿ8‹Ø³ÊÐ.
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(ÄË›ºøÿÿÿÿ
-X
-java:S2696"6Make the enclosing method "static" or remove this set.(ÞÕü˜ÿÿÿÿÿ8ßá²ÊÐ.
-O
-java:S1444"-Make this "public static isAdmin" field final(ÎÛÁöøÿÿÿÿ8‚ºÊÐ.
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(ÄË›ºøÿÿÿÿ
 u
-java:S1104"SMake isAdmin a static final constant or non-public and provide accessors if needed.(ÎÛÁöøÿÿÿÿ8‚ºÊÐ.
+java:S1104"SMake isAdmin a static final constant or non-public and provide accessors if needed.(ÎÛÁöøÿÿÿÿ8‚ºÊÐ.
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ÞÕü˜ÿÿÿÿÿ8ßá²ÊÐ.
+O
+java:S1444"-Make this "public static isAdmin" field final(ÎÛÁöøÿÿÿÿ8‚ºÊÐ.
+X
+java:S2696#"6Make the enclosing method "static" or remove this set.(‘ŸÓ¼üÿÿÿÿ8‹Ø³ÊÐ.
+K
+java:S1659")Declare "loginIntent" on a separate line.(ã ­§üÿÿÿÿ8æÿŒÝÒ.
+]	java:S125"<This block of commented-out lines of code should be removed.(”ºû¡øÿÿÿÿ8Å¨“ÝÒ.

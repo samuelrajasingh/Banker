@@ -18,9 +18,12 @@ import com.urk17cs290.banker.entities.Account;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * AccountAdapter is used to set recyclerView to view the list of all accounts
+ */
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountHolder> {
     private List<Account> accounts = new ArrayList<>();
-    private OnItemClickListener listener;
+//    private OnItemClickListener listener;
 
     @NonNull
     @Override
@@ -47,30 +50,37 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
         return accounts.size();
     }
 
+    /**
+     * @param accounts sets the AccountAdapter accounts to this parameter
+     */
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
         notifyDataSetChanged();
     }
 
+    /**
+     * @param position  position of the ViewHolder on the Recycler View
+     * @return Account at the position on the recycler view
+     */
     public Account getAccountAt(int position) {
         return accounts.get(position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        this.listener = listener;
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(Account account);
-    }
+//    public void setOnItemClickListener(OnItemClickListener listener) {
+//        this.listener = listener;
+//    }
+//
+//    public interface OnItemClickListener {
+//        void onItemClick(Account account);
+//    }
 
     class AccountHolder extends RecyclerView.ViewHolder {
-        private TextView textViewAccountName;
-        private TextView textViewAccountNumber;
-        private TextView textViewBalance;
-        private TextView textViewEmail;
-        private TextView textViewMobile;
-        private TextView textViewAccountType;
+        private final TextView textViewAccountName;
+        private final TextView textViewAccountNumber;
+        private final TextView textViewBalance;
+        private final TextView textViewEmail;
+        private final TextView textViewMobile;
+        private final TextView textViewAccountType;
 
         public AccountHolder(View itemView) {
             super(itemView);
@@ -81,13 +91,13 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountH
             textViewEmail = itemView.findViewById(R.id.text_view_account_email);
             textViewMobile = itemView.findViewById(R.id.text_view_account_mobile);
 
-            itemView.setOnClickListener(
-                    v -> {
-                        int position = getAdapterPosition();
-                        if (listener != null && position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(accounts.get(position));
-                        }
-                    });
+//            itemView.setOnClickListener(
+//                    v -> {
+//                        int position = getAdapterPosition();
+//                        if (listener != null && position != RecyclerView.NO_POSITION) {
+//                            listener.onItemClick(accounts.get(position));
+//                        }
+//                    });
         }
     }
 }

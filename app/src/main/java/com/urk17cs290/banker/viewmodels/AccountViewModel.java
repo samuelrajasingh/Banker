@@ -14,6 +14,9 @@ import com.urk17cs290.banker.repos.AccountRepository;
 
 import java.util.List;
 
+/**
+ * This class is used to pull and push data to the repository
+ */
 public class AccountViewModel extends AndroidViewModel {
     private AccountRepository repository;
     private LiveData<List<Account>> allAccounts;
@@ -47,18 +50,21 @@ public class AccountViewModel extends AndroidViewModel {
     }
 
     /*
-     * function to delete a account object from the room database.
+     * function to delete a account object on the database.
      */
     public void delete(Account account) {
         repository.delete(account);
     }
 
+    /**
+     * function to delete all accounts object on the database.
+     */
     public void deleteAllAccounts() {
         repository.deleteAllAccounts();
     }
 
     /*
-     * LiveData object to get account objects from the room database.
+     * LiveData object to get all account objects from the database.
      */
     public LiveData<List<Account>> getAllAccounts() {
         return allAccounts;
