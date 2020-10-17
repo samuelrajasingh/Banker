@@ -14,4 +14,5 @@
 .cxx
 app/libs/
 .idea
+.idea/sonarlint/*
 ./.idea/*
