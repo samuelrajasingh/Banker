@@ -2,6 +2,7 @@
 ## Exercise 8
 
 An application following mvvm model and implementing room database,with CRUD operations.
+Feel free to fork clone,or create a pull request
  <table>
 
    <tr>
