@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: Run Unit Tests
+    name: Build
     runs-on: ubuntu-18.04
 
     steps:
@@ -19,8 +19,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Unit tests
-        run: bash ./gradlew test --stacktrace
+      - name: Build
+        run: bash ./gradlew build --stacktrace
 
   apk:
     name: Generate APK
