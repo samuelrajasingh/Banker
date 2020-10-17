@@ -20,8 +20,8 @@ jobs:
       run: ./gradlew clean assembleDebug
 
     - name: Get latest release version number
-        id: get_version
-        uses: battila7/get-version-action@v2
+      id: get_version
+      uses: battila7/get-version-action@v2
     - name: Create release and upload apk
       uses: underwindfall/create-release-with-debugapk@v2.0.0
       env:
