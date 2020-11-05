@@ -1,7 +1,7 @@
 
-r	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ýæ—ùÿÿÿÿ8¤šøÜÒ.
-r	java:S116"VRename this field "account_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê‰¼Í8¤šøÜÒ.
-]	java:S110"<This class has 9 parents which is greater than 5 authorized.(‚ŸÁ•üÿÿÿÿ8Ü˜äÌÐ.
 y	java:S116"XRename this field "ac_type_value" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÌÎ¢ûÿÿÿÿ8 ÿÂÆÐ.
-r	java:S116"VRename this field "acc_balance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ÊÔ°8¤šøÜÒ.
 r	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ýì¤ÿÿÿÿÿ8¤šøÜÒ.
+]	java:S110"<This class has 9 parents which is greater than 5 authorized.(‚ŸÁ•üÿÿÿÿ8Ü˜äÌÐ.
+r	java:S116"VRename this field "account_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê‰¼Í8¤šøÜÒ.
+r	java:S116"VRename this field "acc_balance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ÊÔ°8¤šøÜÒ.
+r	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ýæ—ùÿÿÿÿ8¤šøÜÒ.

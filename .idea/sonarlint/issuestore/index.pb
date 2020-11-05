@@ -83,5 +83,12 @@ b
 2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml,8/e/8e27ba16c655f421171956147d0fde89b7d25d17
 h
 8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml,6/e/6ec7d34b130497a10dc92abcde9b313d370a89df
-M
-.github/workflows/android.yml,3/f/3f3614b660c98ad2ec2ec3066dba56ad2e3556ca
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+P
+ .github/workflows/android_CD.yml,e/1/e108080a0a379ed7b86fcdce81485cef92567843
+P
+ .github/workflows/android_CI.yml,d/e/de591a990927ce533ebdbd5f972043fcf2c99455
